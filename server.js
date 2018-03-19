@@ -1,10 +1,16 @@
 const express = require('express');
 var app = express();
 
-app.use(express.static(__dirname + '/public')); //middleware
+app.use(express.static(__dirname + '/public', {
+    extensions: ['html', 'htm'],
+    // Other options here
+}));
+
+//app.use(express.static(__dirname + '/public')); //middleware
 
 app.get("/", (request, response) => {
-response.send('<h2 style="color: red">Home Page</h2>');
+response.send('<h2 style="color: red">Home Page</h2><br>'
++ '<a href="reservations">Make a reservations</a>');
 /*response.send({
 name: "Mirza",
 likes : [
@@ -27,5 +33,6 @@ errorMessage: 'Unable to handle request'
 });
 
 app.listen(3000, () => {
+console.log("Starting Server");
 console.log("Server is running on port 3000");
 });
