@@ -1,3 +1,13 @@
 h1{
-color: blue;
+color: white;
+}
+
+body{
+      background: url("node.png") no-repeat center center;
+  width: 100%;
+  padding: 20px 10px 60px 10px;
+  background-attachment: fixed;
+  height: 100vh;
+  overflow: hidden;
+  background-size: cover;
 }
