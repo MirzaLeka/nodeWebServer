@@ -3,13 +3,13 @@ const hbs = require("hbs");
 const fs = require("fs");
 
 var app = express();
-
+/*
 app.use((req, res, next) => {
 res.render('maintenance.hbs'); // express prati redoslijed operacija. ovdje smo rekli da se renderuje maintenance.hbs te ce to prekriti sve ostale fajlove jer je prije njih (odozgo)
 //tj sve sto je ispod nece se nikad aktivirati
 } );
 
-
+*/
 hbs.registerHelper("getCurrentYear", () => {
 return new Date().getFullYear();
 });
