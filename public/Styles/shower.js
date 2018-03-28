@@ -1,10 +1,15 @@
 const fs = require("fs");
 const lodash = require("lodash");
 const $ = require("jquery");
+const soap = require("./soap");
 
+var arr = [1,2,3,4,4,4,5,6,1,2];
+var output = lodash.without([...arr, 1,2,3, ...arr],3);
+console.log(lodash.uniq(output));
 
-var output = lodash.without([1,2,3],3);
-console.log(output);
+console.log("Watchify is watching");
 
-$("h1").html(output);
+console.log( soap.getSoap() );
+
+//$("h1").html(output);
 
